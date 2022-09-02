@@ -1,7 +1,16 @@
-body{
-  min-height: 2000px;
+body {
+  min-height: 1590px;
+}
+.navbar{
+background-color: #273036;
 }
 .jumbotron {
-    padding-top: 2rem;
-  background-color: #F2AA4C;
+  padding-top: 2rem;
+  background-color: #f2aa4c;
+}
+#tentang{
+  background-color: #f2aa4c;
+}
+#kontak{
+  background-color: #f2aa4c;
 }
