@@ -7,7 +7,7 @@ body {
   background: linear-gradient(to bottom right, #000, #0dd1fd80);
   font-family: "Tiro Devanagari Hindi", serif;
 }
-.navbar .container .navbar-brand {
+.navbar .container .box {
   position: relative;
   width: 32px;
   height: 30px;
@@ -18,7 +18,7 @@ body {
   overflow: hidden;
   border-radius: 5px;
 }
-.navbar .container .navbar-brand::before {
+.navbar .container .box::before {
   content: '';
   position: absolute;
   width: 50px;
@@ -26,12 +26,17 @@ body {
   background: linear-gradient(#000000, #0dd1fd);
   animation: animate 4s linear infinite;
 }
-.navbar .container .navbar-brand ::after{
+.navbar .container .box::after{
   content:'';
   position: absolute;
   inset: 1px;
   background: linear-gradient(to bottom right, #000, #0dd1fd80);
   border-radius: 10px;
+}
+
+.navbar .container .box .navbar-brand {
+  color: #fff;
+  z-index: 1000;
 }
 @keyframes animate {
   0% {
