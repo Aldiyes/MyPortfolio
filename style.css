@@ -1,15 +1,44 @@
-*{
-  scroll-behavior: smooth;
-  background-image: url(Images/federico-beccari-eGJg5iRGlg8-unsplash.jpg)
-}
+@import url("https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&display=swap");
 body {
+  padding-top: 5rem;
+  color: aliceblue;
   min-height: 1590px;
-  padding-top: 4rem;
+  /* background-image: url(Images/federico-beccari-eGJg5iRGlg8-unsplash.jpg); */
+  background: linear-gradient(to bottom right, #000, #0dd1fd80);
+  font-family: "Tiro Devanagari Hindi", serif;
 }
-.navbar{
-  font-size: 20px;
+.navbar .container .navbar-brand {
+  position: relative;
+  width: 32px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 5px;
 }
-.jumbotron {
-  padding-top: 2rem;
-  background-color: #ffffff;
+.navbar .container .navbar-brand::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background: linear-gradient(#000000, #0dd1fd);
+  animation: animate 4s linear infinite;
 }
+.navbar .container .navbar-brand ::after{
+  content:'';
+  position: absolute;
+  inset: 1px;
+  background: linear-gradient(to bottom right, #000, #0dd1fd80);
+  border-radius: 10px;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
