@@ -1,16 +1,15 @@
+*{
+  scroll-behavior: smooth;
+  background-image: url(Images/federico-beccari-eGJg5iRGlg8-unsplash.jpg)
+}
 body {
   min-height: 1590px;
+  padding-top: 4rem;
 }
 .navbar{
-background-color: #273036;
+  font-size: 20px;
 }
 .jumbotron {
   padding-top: 2rem;
-  background-color: #f2aa4c;
-}
-#tentang{
-  background-color: #f2aa4c;
-}
-#kontak{
-  background-color: #f2aa4c;
+  background-color: #ffffff;
 }

@@ -15,22 +15,25 @@
   </head>
   <body>
     <!-- NavBar -->
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-lg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="Images/LogoLogo.svg" alt="" width="80" height="40" /> </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+      <div class="container">
+        <a class="navbar-brand" href="#">Tarsisius Risto </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navbar">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <ul class="navbar-nav ms-auto text-dark">
+            <li class="nav-item text-dark">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tentang</a>
+              <a class="nav-link" href="#tentang">Tentang</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Kontak</a>
+              <a class="nav-link" href="#resume">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak">Kontak</a>
             </li>
           </ul>
         </div>
@@ -40,8 +43,8 @@
 
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
-      <img src="Images/foto.jpg" alt="Tarsisius Risto Ardianto" width="175" class="rounded-circle border border-dark" />
-      <h1 class="display-10">Tarsisius Risto Ardianto</h1>
+      <!-- <img src="Images/Photo.svg" alt="" width="150" class="rounded" /> -->
+      <h1 class="display-10" style="font-style: Poppins">Tarsisius Risto Ardianto</h1>
       <p class="lead">Mahasiswa Informatika</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 300">
         <path
@@ -55,17 +58,17 @@
 
     <!-- Tentang -->
     <section id="tentang">
-      <div class="container-xxl">
+      <div class="container-md">
         <div class="row text-center pb-5">
           <div class="col">
             <h2>Tentang</h2>
           </div>
         </div>
         <div class="row justify-content-between fs-4 font-monospace">
-          <div class="col-xxl-5">
+          <div class="col-md-5">
             <p>Halo, nama saya Tarsisius Risto Ardianto, saya Mahasiswa Informatika dari Universitas Sanata Dharma saat ini saya lagi berusaha belajar HTML</p>
           </div>
-          <div class="col-xxl-5">
+          <div class="col-md-5">
             <p>Untuk meraih apa yang benar benar kamu inginkan, fokus saja tidak cukup. Kamu harus memiliki rasa lapar untuk meraihnya</p>
           </div>
         </div>
@@ -88,9 +91,9 @@
           <div class="col">
             <h2>Kontak</h2>
           </div>
-          <!-- <div class="gambarKontak">
-            <img src="Images/Kontak.png" alt="" />
-          </div> -->
+          <div class="gambarKontak">
+            <img src="Images/Kontak.png" alt="" width="50" class="rounded" />
+          </div>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1070 300">
@@ -102,7 +105,16 @@
       </svg>
     </section>
     <!-- Akhir Kontak -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      var nav=document.querySelector('nav');
+      window.addEventListener('scroll', function(){
+          if(window.pageYOffset > 100){
+              nav.classList.add('bg-dark', 'shadow');
+          }else{
+              nav.classList.remove('bg-dark','shadow');
+          }
+      })
+  </script>
   </body>
 </html>
